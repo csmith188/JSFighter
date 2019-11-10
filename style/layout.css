@@ -1,0 +1,91 @@
+body {
+    margin: auto;
+}
+
+#gameBox {
+    margin: auto;
+    border-width: 2px;
+    padding: 10px;
+    width: 80%;
+}
+#headerBox {
+    display: flex;
+}
+
+.logos {
+    height: 64px;
+}
+
+h1 {
+    margin: auto;
+}
+
+#graphicsBox {
+    width: 75%;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fighterIMG {
+    margin: auto;
+}
+
+#barsBox {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.hpBar {
+    width: 25%;
+}
+.spBar {
+    width: 18%;
+}
+
+#controlsBox {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.inputs {
+    margin: 5px;
+}
+
+.inputPlayer0 {
+
+}
+
+.inputPlayer1 {
+
+}
+
+.inputs {
+
+}
+
+#outputBox {
+    padding: 5px;
+}
+
+.damageColor {
+
+}
+
+.recoverColor {
+
+}
+
+.healthColor {
+
+}
+
+.specialColor {
+
+}
+
+.abilityColor {
+
+}

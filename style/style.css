@@ -1,0 +1,95 @@
+body {
+    background-color: #DDDDDD;
+    font-family: consolas;
+}
+
+#gameBox {
+    border-style: solid;
+    border-color: #000000;
+    background-color: #AAAAAA;
+}
+#headerBox {
+
+}
+
+.logos {
+
+}
+
+h1 {
+
+}
+
+#graphicsBox {
+    background-color: #DDDDDD;
+}
+
+.fighterIMG {
+
+}
+
+#barsBox {
+
+}
+
+.HPfill {
+    background-color: #33FF33;
+}
+
+.SPfill {
+    background-color: #3333FF;
+}
+
+.hpBar {
+    background-color: #AA6666;
+}
+
+.hpBar {
+    background-color: #AA6666;
+}
+.spBar {
+    background-color: #AA6666;
+}
+
+#controlsBox {
+
+}
+
+.inputs {
+
+}
+
+.inputPlayer0 {
+    color: #FF6666;
+}
+
+.inputPlayer1 {
+    color: #6666FF;
+}
+
+#outputBox {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.damageColor {
+    color: #FF6666;
+    text-shadow: 2px 2px 5px #FF0000;
+}
+
+.recoverColor {
+    color: #66FF66;
+}
+
+.healthColor {
+    color: #FFFF66;
+}
+
+.specialColor {
+    color: #6666FF;
+}
+
+.abilityColor {
+    color: #FF66FF;
+    text-shadow: 2px 2px 5px #FF00FF;
+}
