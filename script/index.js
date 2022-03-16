@@ -7,9 +7,9 @@ let Player0;
 let Player1;
 
 // These will be used when creating the two fighters to identify each
-const P0NAME = "Crash";
+const P0NAME = "zach";
 const P0CHARA = "crashr";
-const P1NAME = "Sam";
+const P1NAME = "tiffani";
 const P1CHARA = "saml";
 
 // Reserve a space in the global scope to save our div containers
