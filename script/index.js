@@ -9,7 +9,7 @@ let Player1;
 // These will be used when creating the two fighters to identify each
 const P0NAME = "Crash";
 const P0CHARA = "crashr";
-const P1NAME = "Sam";
+const P1NAME = "David";
 const P1CHARA = "saml";
 
 // Reserve a space in the global scope to save our div containers
@@ -168,7 +168,7 @@ class Crash extends Fighter {
     }
 }
 
-class Sam extends Fighter {
+class David extends Fighter {
     constructor(name, charaName) {
         super(name, charaName);
         // Set all of our defaults values for this new fighter here
