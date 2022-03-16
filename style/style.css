@@ -21,7 +21,8 @@ h1 {
 }
 
 #graphicsBox {
-    background-color: #DDDDDD;
+    background-color: #3d7874
+  ;
 }
 
 .fighterIMG {
@@ -45,7 +46,7 @@ h1 {
 }
 
 .hpBar {
-    background-color: #AA6666;
+    background-color: #eb4034;
 }
 .spBar {
     background-color: #AA6666;
