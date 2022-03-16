@@ -7,9 +7,9 @@ let Player0;
 let Player1;
 
 // These will be used when creating the two fighters to identify each
-const P0NAME = "Crash";
+const P0NAME = "Russell";
 const P0CHARA = "crashr";
-const P1NAME = "Sam";
+const P1NAME = "Zach";
 const P1CHARA = "saml";
 
 // Reserve a space in the global scope to save our div containers
@@ -19,9 +19,9 @@ let graphics;
 let bars;
 
 // Game parameters
-const START_HP = 40; // The amount of HP each player starts with
+const START_HP = 69; // The amount of HP each player starts with
 const START_SP = 10; // The amount of SP each player starts with
-const MAX_STAT = 10; // The highest any stat can go
+const MAX_STAT = 42.0; // The highest any stat can go
 const MIN_DODGE = 4; // The target the player needs to hit to
 const DODGE_MULTI = 0.25 // The multiplier of damage that is reduced by a dodge
 const COST_DOUBLE = 2; // The SP cost of a Double Attack
@@ -146,6 +146,7 @@ class Fighter {
         updateGFX(opponent.charaName, 'idle')
         // Update the health bar, since we healed
         updateBar(this, 'HP', this.hp, START_HP);
+
         // Add old html from outputBox back in
         if (logging) {
             // Put the old html back into the output box
@@ -153,6 +154,27 @@ class Fighter {
         }
         // Call this to end the turn
         endTurn();
+    }
+    block(){
+      if (this.sp >= 3) {
+          // Consume SP for using the ability
+          this.sp -= 3;
+          this.def=this.def+2
+          output.innerHTML += `Increased defense by 2<br>`;
+          // Add old html from outputBox back in
+          if (logging) {
+            // Put the old html back into the output box
+            output.innerHTML += '<hr>' + oldText
+          }
+          // Call this to end the turn
+          endTurn();
+
+          // Change graphic to recovery graphic
+          updateGFX(this.charaName, 'spell')
+      } else {
+          // If there's not enough SP, do nothing
+          output.innerHTML += `Not enough SP!<br>`;
+      }
     }
 }
 
@@ -230,6 +252,8 @@ function showControls() {
     controls.innerHTML = '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.single(Player' + (!playerTurn ? 1 : 0) + ')">Single</button>';
     controls.innerHTML += '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.double(Player' + (!playerTurn ? 1 : 0) + ')">Double [2 SP]</button>';
     controls.innerHTML += '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.recover(Player' + (!playerTurn ? 1 : 0) + ')">Recover [3 SP]</button>';
+    controls.innerHTML += '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.block()">Block [3 SP]</button>';
+
 }
 
 function updateBar(player, bar, current, max) {
