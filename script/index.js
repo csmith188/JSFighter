@@ -7,9 +7,9 @@ let Player0;
 let Player1;
 
 // These will be used when creating the two fighters to identify each
-const P0NAME = "Crash";
+const P0NAME = "Sam";
 const P0CHARA = "crashr";
-const P1NAME = "Sam";
+const P1NAME = "Todd";
 const P1CHARA = "saml";
 
 // Reserve a space in the global scope to save our div containers
@@ -38,7 +38,7 @@ class Fighter {
         this.name = name;
         this.hp = START_HP;
         this.sp = START_SP;
-        this.atk = 5;
+        this.atk = 100;
         this.def = 5;
         this.tek = 5;
         this.charaName = charaName;
