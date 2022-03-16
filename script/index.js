@@ -7,9 +7,9 @@ let Player0;
 let Player1;
 
 // These will be used when creating the two fighters to identify each
-const P0NAME = "Crash";
+const P0NAME = "George Washington";
 const P0CHARA = "crashr";
-const P1NAME = "Sam";
+const P1NAME = "Abraham Lincoln";
 const P1CHARA = "saml";
 
 // Reserve a space in the global scope to save our div containers
@@ -79,7 +79,7 @@ class Fighter {
         }
     }
 
-    single(target) {
+    Dropkick(target) {
         // Save the html already in the outputBox, then erase the outputBox
         let oldText = output.innerHTML;
         output.innerHTML = "";
@@ -183,7 +183,7 @@ class Todd extends Fighter {
     constructor(name, charaName) {
         super(name, charaName);
         // Set all of our defaults values for this new fighter here
-        // Todd is very cautious, making him better at defending
+        // George Washington is very cautious, making him better at defending
         this.atk = 4;
         this.def = 7;
         this.tek = 4;
@@ -221,13 +221,13 @@ function endTurn() {
 }
 
 function hideControls() {
-    controls.innerHTML = "";
+    controls.innerHTML = "You win... but what did you gain?";
 }
 
 function showControls() {
     // Write three buttons for 'Single', 'Double', and 'Recover'. but the object names must be correct
     // We use tricky JS syntax tricks to insert the right player number into the html string
-    controls.innerHTML = '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.single(Player' + (!playerTurn ? 1 : 0) + ')">Single</button>';
+    controls.innerHTML = '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.Dropkick(Player' + (!playerTurn ? 1 : 0) + ')">Dropkick</button>';
     controls.innerHTML += '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.double(Player' + (!playerTurn ? 1 : 0) + ')">Double [2 SP]</button>';
     controls.innerHTML += '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.recover(Player' + (!playerTurn ? 1 : 0) + ')">Recover [3 SP]</button>';
 }
