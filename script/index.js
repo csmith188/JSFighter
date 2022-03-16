@@ -9,7 +9,7 @@ let Player1;
 // These will be used when creating the two fighters to identify each
 const P0NAME = "Crash";
 const P0CHARA = "crashr";
-const P1NAME = "Sam";
+const P1NAME = "David";
 const P1CHARA = "saml";
 
 // Reserve a space in the global scope to save our div containers
@@ -19,14 +19,14 @@ let graphics;
 let bars;
 
 // Game parameters
-const START_HP = 40; // The amount of HP each player starts with
+const START_HP = 100; // The amount of HP each player starts with
 const START_SP = 10; // The amount of SP each player starts with
 const MAX_STAT = 10; // The highest any stat can go
 const MIN_DODGE = 4; // The target the player needs to hit to
-const DODGE_MULTI = 0.25 // The multiplier of damage that is reduced by a dodge
-const COST_DOUBLE = 2; // The SP cost of a Double Attack
-const COST_RECOVER = 3; // The SP cost of Recover
-const RECOVER_MULTI = 3; // THe multiplier to the random amount of recovered HP
+const DODGE_MULTI = 0.60 // The multiplier of damage that is reduced by a dodge
+const COST_DOUBLE = 1; // The SP cost of a Double Attack
+const COST_RECOVER = 12; // The SP cost of Recover
+const RECOVER_MULTI = 12; // THe multiplier to the random amount of recovered HP
 
 // This is the template that we create new fighters from
 class Fighter {
