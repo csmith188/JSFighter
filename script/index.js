@@ -38,9 +38,9 @@ class Fighter {
         this.name = name;
         this.hp = START_HP;
         this.sp = START_SP;
-        this.atk = 5;
-        this.def = 5;
-        this.tek = 5;
+        this.atk = 6;
+        this.def = 6;
+        this.tek = 6;
         this.charaName = charaName;
     }
 
