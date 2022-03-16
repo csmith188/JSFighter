@@ -7,9 +7,9 @@ let Player0;
 let Player1;
 
 // These will be used when creating the two fighters to identify each
-const P0NAME = "Crash";
+const P0NAME = "Coke";
 const P0CHARA = "crashr";
-const P1NAME = "Sam";
+const P1NAME = "Pepsi";
 const P1CHARA = "saml";
 
 // Reserve a space in the global scope to save our div containers
@@ -19,14 +19,14 @@ let graphics;
 let bars;
 
 // Game parameters
-const START_HP = 40; // The amount of HP each player starts with
-const START_SP = 10; // The amount of SP each player starts with
-const MAX_STAT = 10; // The highest any stat can go
+const START_HP = 420; // The amount of HP each player starts with
+const START_SP = 69; // The amount of SP each player starts with
+const MAX_STAT = 1000; // The highest any stat can go
 const MIN_DODGE = 4; // The target the player needs to hit to
 const DODGE_MULTI = 0.25 // The multiplier of damage that is reduced by a dodge
-const COST_DOUBLE = 2; // The SP cost of a Double Attack
-const COST_RECOVER = 3; // The SP cost of Recover
-const RECOVER_MULTI = 3; // THe multiplier to the random amount of recovered HP
+const COST_DOUBLE = 10; // The SP cost of a Double Attack
+const COST_RECOVER = 15; // The SP cost of Recover
+const RECOVER_MULTI = 4; // THe multiplier to the random amount of recovered HP
 
 // This is the template that we create new fighters from
 class Fighter {
@@ -157,25 +157,25 @@ class Fighter {
 }
 
 // This adds 'mutations' to the Fighter template
-class Crash extends Fighter {
+class Coke extends Fighter {
     constructor(name, charaName) {
         super(name, charaName);
         // Set all of our defaults values for this new fighter here
         // Crash does more damage but lacks in techniques
-        this.atk = 7;
-        this.def = 5;
-        this.tek = 3;
+        this.atk = 35;
+        this.def = 1;
+        this.tek = 25;
     }
 }
 
-class Sam extends Fighter {
+class Pepsi extends Fighter {
     constructor(name, charaName) {
         super(name, charaName);
         // Set all of our defaults values for this new fighter here
         // Same is well trained in technique, but isn't great at fighting
-        this.atk = 3;
-        this.def = 5;
-        this.tek = 7;
+        this.atk = 25;
+        this.def = 1;
+        this.tek = 35;
     }
 }
 
@@ -204,9 +204,9 @@ function endTurn() {
     // "Flip" the turn counter by making it equal the inverse of what it is now
     playerTurn = !playerTurn
     // Give one sp back to the user whose turn it just became
-    if (Player0.sp < 10)
+    if (Player0.sp < 69)
         Player0.sp += !playerTurn
-    if (Player1.sp < 10)
+    if (Player1.sp < 69)
         Player1.sp += playerTurn
     updateBar(Player0, 'HP', Player0.hp, START_HP);
     updateBar(Player0, 'SP', Player0.sp, START_SP);
@@ -228,8 +228,8 @@ function showControls() {
     // Write three buttons for 'Single', 'Double', and 'Recover'. but the object names must be correct
     // We use tricky JS syntax tricks to insert the right player number into the html string
     controls.innerHTML = '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.single(Player' + (!playerTurn ? 1 : 0) + ')">Single</button>';
-    controls.innerHTML += '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.double(Player' + (!playerTurn ? 1 : 0) + ')">Double [2 SP]</button>';
-    controls.innerHTML += '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.recover(Player' + (!playerTurn ? 1 : 0) + ')">Recover [3 SP]</button>';
+    controls.innerHTML += '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.double(Player' + (!playerTurn ? 1 : 0) + ')">Double [10 SP]</button>';
+    controls.innerHTML += '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.recover(Player' + (!playerTurn ? 1 : 0) + ')">Recover [15 SP]</button>';
 }
 
 function updateBar(player, bar, current, max) {
