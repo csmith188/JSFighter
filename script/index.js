@@ -7,7 +7,7 @@ let Player0;
 let Player1;
 
 // These will be used when creating the two fighters to identify each
-const P0NAME = "Crash";
+const P0NAME = "Hunter";
 const P0CHARA = "crashr";
 const P1NAME = "Sam";
 const P1CHARA = "saml";
@@ -26,7 +26,7 @@ const MIN_DODGE = 4; // The target the player needs to hit to
 const DODGE_MULTI = 0.25 // The multiplier of damage that is reduced by a dodge
 const COST_DOUBLE = 2; // The SP cost of a Double Attack
 const COST_RECOVER = 3; // The SP cost of Recover
-const RECOVER_MULTI = 3; // THe multiplier to the random amount of recovered HP
+const RECOVER_MULTI = 3; // The multiplier to the random amount of recovered HP
 
 // This is the template that we create new fighters from
 class Fighter {
@@ -69,7 +69,7 @@ class Fighter {
         if (koCheck(target, damage)) {
             // "true" was returned
             // There was a knockout!
-            output.innerHTML += `<b><span class="damageColor">Knockout!</span></b><br>`;
+            output.innerHTML += `<b><span class="damageColor">Knockout! you got destroyed!</span></b><br>`;
             updateGFX(target.charaName, 'ko')
 
         } else {
@@ -109,7 +109,7 @@ class Fighter {
             // Do one attack
             this.attack(target);
         } else {
-            output.innerHTML += `Not enough SP!<br>`;
+            output.innerHTML += `Not enough SP! stupid<br>`;
         }
         // Add old html from outputBox back in
         if (logging) {
@@ -140,7 +140,7 @@ class Fighter {
             updateGFX(this.charaName, 'spell')
         } else {
             // If there's not enough SP, do nothing
-            output.innerHTML += `Not enough SP!<br>`;
+            output.innerHTML += `Not enough SP! learn to read.<br>`;
         }
         // Other player will be idle, so change graphics
         updateGFX(opponent.charaName, 'idle')
@@ -157,14 +157,14 @@ class Fighter {
 }
 
 // This adds 'mutations' to the Fighter template
-class Crash extends Fighter {
+class Hunter extends Fighter {
     constructor(name, charaName) {
         super(name, charaName);
         // Set all of our defaults values for this new fighter here
-        // Crash does more damage but lacks in techniques
-        this.atk = 7;
-        this.def = 5;
-        this.tek = 3;
+        // Hunter does more damage but lacks in techniques
+        this.atk = 50;
+        this.def = 25;
+        this.tek = 20;
     }
 }
 
@@ -173,9 +173,9 @@ class Sam extends Fighter {
         super(name, charaName);
         // Set all of our defaults values for this new fighter here
         // Same is well trained in technique, but isn't great at fighting
-        this.atk = 3;
-        this.def = 5;
-        this.tek = 7;
+        this.atk = 6;
+        this.def = 7;
+        this.tek = 15;
     }
 }
 
