@@ -19,8 +19,8 @@ let graphics;
 let bars;
 
 // Game parameters
-const START_HP = 40; // The amount of HP each player starts with
-const START_SP = 10; // The amount of SP each player starts with
+const START_HP = 50; // The amount of HP each player starts with
+const START_SP = 5; // The amount of SP each player starts with
 const MAX_STAT = 10; // The highest any stat can go
 const MIN_DODGE = 4; // The target the player needs to hit to
 const DODGE_MULTI = 0.25 // The multiplier of damage that is reduced by a dodge
@@ -38,7 +38,7 @@ class Fighter {
         this.name = name;
         this.hp = START_HP;
         this.sp = START_SP;
-        this.atk = 5;
+        this.atk = 10;
         this.def = 5;
         this.tek = 5;
         this.charaName = charaName;
@@ -69,7 +69,7 @@ class Fighter {
         if (koCheck(target, damage)) {
             // "true" was returned
             // There was a knockout!
-            output.innerHTML += `<b><span class="damageColor">Knockout!</span></b><br>`;
+            output.innerHTML += `<b><span class="damageColor"><img class="logos" src="img/fombo.jpeg"></span></b><br>`;
             updateGFX(target.charaName, 'ko')
 
         } else {
