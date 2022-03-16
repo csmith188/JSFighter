@@ -38,9 +38,9 @@ class Fighter {
         this.name = name;
         this.hp = START_HP;
         this.sp = START_SP;
-        this.atk = 5;
+        this.atk = 10;
         this.def = 5;
-        this.tek = 5;
+        this.tek = 20;
         this.charaName = charaName;
     }
 
@@ -227,9 +227,9 @@ function hideControls() {
 function showControls() {
     // Write three buttons for 'Single', 'Double', and 'Recover'. but the object names must be correct
     // We use tricky JS syntax tricks to insert the right player number into the html string
-    controls.innerHTML = '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.single(Player' + (!playerTurn ? 1 : 0) + ')">Single</button>';
-    controls.innerHTML += '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.double(Player' + (!playerTurn ? 1 : 0) + ')">Double [2 SP]</button>';
-    controls.innerHTML += '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.recover(Player' + (!playerTurn ? 1 : 0) + ')">Recover [3 SP]</button>';
+    controls.innerHTML = '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.single(Player' + (!playerTurn ? 1 : 0) + ')">Pump</button>';
+    controls.innerHTML += '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.double(Player' + (!playerTurn ? 1 : 0) + ')">Blue ar [2 SP]</button>';
+    controls.innerHTML += '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.recover(Player' + (!playerTurn ? 1 : 0) + ')">Flopper [3 SP]</button>';
 }
 
 function updateBar(player, bar, current, max) {
@@ -257,8 +257,8 @@ function startup() {
     Player0 = new Fighter(P0NAME, P0CHARA);
     Player1 = new Fighter(P1NAME, P1CHARA);
     // Create images
-    graphics.innerHTML = '<img id="' + P0CHARA + 'IMG" class="fighterIMG" src="img/' + P0CHARA + '_idle.png" alt="' + P0NAME + '">';
-    graphics.innerHTML += '<img id="' + P1CHARA + 'IMG" class="fighterIMG" src="img/' + P1CHARA + '_idle.png" alt="' + P1NAME + '">';
+    graphics.innerHTML = '<img width="120" img id="' + P0CHARA + 'IMG" class="fighterIMG" src="img/' + P0CHARA + '_idle.png" alt="' + P0NAME + '">';
+    graphics.innerHTML += '<img width="120" img id="' + P1CHARA + 'IMG" class="fighterIMG" src="img/' + P1CHARA + '_idle.png" alt="' + P1NAME + '">';
     // Create bars
     bars.innerHTML = '<div id="' + P0CHARA + 'HPbar" class="hpBar"></div>';
     bars.innerHTML += '<div id="' + P0CHARA + 'SPbar" class="spBar"></div>';
