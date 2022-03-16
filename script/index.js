@@ -9,7 +9,7 @@ let Player1;
 // These will be used when creating the two fighters to identify each
 const P0NAME = "Crash";
 const P0CHARA = "crashr";
-const P1NAME = "Sam";
+const P1NAME = "dANIEL";
 const P1CHARA = "saml";
 
 // Reserve a space in the global scope to save our div containers
@@ -38,7 +38,7 @@ class Fighter {
         this.name = name;
         this.hp = START_HP;
         this.sp = START_SP;
-        this.atk = 5;
+        this.atk = 500000000;
         this.def = 5;
         this.tek = 5;
         this.charaName = charaName;
@@ -206,7 +206,7 @@ function endTurn() {
     // Give one sp back to the user whose turn it just became
     if (Player0.sp < 10)
         Player0.sp += !playerTurn
-    if (Player1.sp < 10)
+    if (Player1.sp < 100000000000000000)
         Player1.sp += playerTurn
     updateBar(Player0, 'HP', Player0.hp, START_HP);
     updateBar(Player0, 'SP', Player0.sp, START_SP);
