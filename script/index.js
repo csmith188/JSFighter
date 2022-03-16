@@ -25,8 +25,8 @@ const MAX_STAT = 10; // The highest any stat can go
 const MIN_DODGE = 4; // The target the player needs to hit to
 const DODGE_MULTI = 0.25 // The multiplier of damage that is reduced by a dodge
 const COST_DOUBLE = 2; // The SP cost of a Double Attack
-const COST_RECOVER = 3; // The SP cost of Recover
-const RECOVER_MULTI = 3; // THe multiplier to the random amount of recovered HP
+const COST_RECOVER = 5; // The SP cost of Recover
+const RECOVER_MULTI = 2; // THe multiplier to the random amount of recovered HP
 
 // This is the template that we create new fighters from
 class Fighter {
@@ -109,7 +109,7 @@ class Fighter {
             // Do one attack
             this.attack(target);
         } else {
-            output.innerHTML += `Not enough SP!<br>`;
+            output.innerHTML += `you need to take a break!<br>`;
         }
         // Add old html from outputBox back in
         if (logging) {
@@ -140,7 +140,7 @@ class Fighter {
             updateGFX(this.charaName, 'spell')
         } else {
             // If there's not enough SP, do nothing
-            output.innerHTML += `Not enough SP!<br>`;
+            output.innerHTML += `you need to take a break!<br>`;
         }
         // Other player will be idle, so change graphics
         updateGFX(opponent.charaName, 'idle')
@@ -162,9 +162,9 @@ class Crash extends Fighter {
         super(name, charaName);
         // Set all of our defaults values for this new fighter here
         // Crash does more damage but lacks in techniques
-        this.atk = 7;
-        this.def = 5;
-        this.tek = 3;
+        this.atk = 10;
+        this.def = 10;
+        this.tek = 20;
     }
 }
 
@@ -173,9 +173,9 @@ class Sam extends Fighter {
         super(name, charaName);
         // Set all of our defaults values for this new fighter here
         // Same is well trained in technique, but isn't great at fighting
-        this.atk = 3;
-        this.def = 5;
-        this.tek = 7;
+        this.atk = 12;
+        this.def = 10;
+        this.tek = 20;
     }
 }
 
