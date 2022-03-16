@@ -41,7 +41,7 @@ h1 {
     width: 25%;
 }
 .spBar {
-    width: 18%;
+    width: 20%;
 }
 
 #controlsBox {
@@ -67,7 +67,7 @@ h1 {
 }
 
 #outputBox {
-    padding: 5px;
+    padding: 10px;
 }
 
 .damageColor {
