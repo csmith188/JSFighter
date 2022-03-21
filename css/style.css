@@ -1,0 +1,47 @@
+body{
+  font-family: Dangermode, Calibri,Arial;
+  background-image:linear-gradient(#7a0db5, #ffffff);
+}
+h1 {
+  font-family:Candara, Calibri, Arial;
+  text-align: center;
+}
+#content{
+  margin: auto;
+  width: 500px;
+  text-align: justify;
+}
+.segment{
+padding: 10px;
+  border: 2px solid #000000;
+  margin-bottom: 10px;
+  /* border-width: 1px;
+  border-color: #00000;
+  border-style: dashed; */
+}
+/*
+The following content in the (.segment img) can olny be 200px
+*/
+
+.segment img{
+  max-width: 200px;
+  margin-bottom: 5px;
+}
+
+.segment .rightimg {
+  float: right;
+  margin-left: 10px;
+
+}
+
+.segment .leftimg {
+  margin-right: 10px;
+  float: left;
+}
+
+.segment p{
+}
+
+p{
+  margin-top: 0px;
+}

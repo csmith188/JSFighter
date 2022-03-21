@@ -1,0 +1,164 @@
+#getToSchool {
+  border: 1px solid #000000;
+  border-width: 1px;
+  margin: auto;
+  width: 350px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #808080;
+  }
+
+#gtsLink {
+color: #FFFFFF;
+text-decoration: none;
+}
+
+.segmentGTS {
+  /*
+  border: 1px solid #000000;
+  border-width: 1px;
+  background-color: #808080;
+  */
+  margin: auto;
+  width: 850px;
+  text-align: center;
+  color: #000000;
+}
+
+body{
+  font-family: Dangermode, Calibri,Arial;
+  background-color: #e0e0eb;
+}
+
+#openMenu {
+  font-size: 1.5em;
+  display: flex;
+}
+
+#closeMenu {
+  display: block;
+  width: 95px;
+}
+
+#menu {
+  border: 2px solid #000000;
+  display: flex;
+  border: flex;
+  width: 120px;
+  border: none;
+}
+
+.menuItem {
+  border: 2px solid #000000;
+  background-color: #1F51FF;
+  color: #000000;
+  border-radius: 2px;
+  margin: 5px;
+  padding: 5px;
+  font-weight: bold;
+  transition-property: background-color;
+  transition-duration: 0.5;
+  display: block;
+  display: flex;
+  border: flex;
+  width: 95px;
+}
+
+.menuItem:hover {
+  background-color: #33CC33;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+ img{
+  width: 200px;
+  margin-bottom: 5px;
+}
+
+.segmentGTS .gpleft {
+  float: left;
+  margin: 0px 10px 0px 0px;
+}
+
+#gameFighter {
+  border: 1px solid #000000;
+  border-width: 1px;
+  margin: auto;
+  width: 350px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #808080;
+  margin-top: 50px;
+}
+
+#fighterLink {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.segmentJSF{
+  margin: auto;
+  width: 850px;
+  text-align: center;
+  color: #000000;
+}
+
+  @media screen and (max-width: 500px) {
+    #menu {
+      display: inline;
+    }
+
+  .segmentGTS  {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    color: #000000;
+   }
+
+  #getToSchool{
+    border: 1px solid #000000;
+    border-width: 1px;
+    margin: auto;
+    width: 150px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #808080;
+  }
+
+  #closeMenu {
+      display: block;
+   }
+
+  #menu {
+      display: block;
+      position: absolute;
+      top: 5px;
+      z-index: 99;
+      width: 40%;
+      left: 20%;
+      transform: translate(-50%);
+      background: solid;
+      background-color: none;
+      border: none;
+   }
+
+  .menuItem {
+    display: flex;
+   }
+
+   img{
+    width: 150px;
+    margin-bottom: 5px;
+   }
+
+   .segmentJSF{
+     width: 300px;
+     margin: auto;
+     text-align: center;
+     color: #000000;
+   }
+
+  }
