@@ -93,3 +93,46 @@ h1 {
     color: #FF66FF;
     text-shadow: 2px 2px 5px #FF00FF;
 }
+
+#openMenu {
+  font-size: 1.5em;
+  display: flex;
+}
+
+#closeMenu {
+  display: block;
+  width: 95px;
+}
+
+#menu {
+  border: 2px solid #000000;
+  display: flex;
+  border: flex;
+  width: 120px;
+  border: none;
+}
+
+.menuItem {
+  border: 2px solid #000000;
+  background-color: #1F51FF;
+  color: #000000;
+  border-radius: 2px;
+  margin: 5px;
+  padding: 5px;
+  font-weight: bold;
+  transition-property: background-color;
+  transition-duration: 0.5;
+  display: block;
+  display: flex;
+  border: flex;
+  width: 95px;
+}
+
+.menuItem:hover {
+  background-color: #33CC33;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}

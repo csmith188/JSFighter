@@ -8,11 +8,40 @@
     <link rel="stylesheet" href="style/style.css">
     <script type="text/javascript" src="script/index.js"></script>
     <title>JS Fighter</title>
+    <script type="text/javascript">
+      function openNav() {
+        var navBox = document.getElementById('menu');
+        navBox.style.display = 'block';
+      }
+      function closeNav() {
+        var navBox = document.getElementById('menu');
+        navBox.style.display = 'none';
+      }
+    </script>
 </head>
 
 <!-- The HTML 'BODY' object loads the data we do see on the page -->
-<body onload="startup();">
+<body onload="startup(); closeNav();">
     <!-- All game content is kept in a 'gameBox' container -->
+    <div id="openMenu" onclick="openNav()">
+      ☰
+    </div>
+    <div id="menu">
+        <div id="closeMenu" class="menuItem" onclick="closeNav()">
+            <a href="#">Close Menu</a>
+         </div>
+        <div class="menuItem">
+            <a href="gamepage.html">Games</a>
+         </div>
+        <!-- <div class="menuItem">
+           <a href="sm.html">Soical Media</a>
+         </div> -->
+  <!--To get rid of the sm button in the sm page-->
+        <div class="menuItem">
+              <a href="index.html">Home</a>
+         </div>
+    </div>
+
     <div id="gameBox">
 
         <!-- The header box is static, so we can populate it now -->

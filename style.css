@@ -1,3 +1,7 @@
+.index{
+  background-image:linear-gradient(#999999, #ffffff);
+}
+
 #getToSchool {
   border: 1px solid #000000;
   border-width: 1px;
@@ -78,9 +82,13 @@ a {
   margin-bottom: 5px;
 }
 
+.gpright {
+  width: 300px;
+}
+
 .segmentGTS .gpleft {
   float: left;
-  margin: 0px 10px 0px 0px;
+  margin: 0px 10px 10px 0;
 }
 
 #gameFighter {
@@ -106,6 +114,12 @@ a {
   color: #000000;
 }
 
+#f1 {
+text-align: center;
+margin-bottom: 50px;
+padding: 30px 0;
+}
+
   @media screen and (max-width: 500px) {
     #menu {
       display: inline;
@@ -118,6 +132,24 @@ a {
     color: #000000;
    }
 
+   .segmentJSF  {
+     width: 300px;
+     margin: auto;
+     text-align: center;
+     color: #000000;
+    }
+
+    #gameFighter {
+      border: 1px solid #000000;
+      border-width: 1px;
+      margin: auto;
+      width: 150px;
+      text-align: center;
+      color: #FFFFFF;
+      background-color: #808080;
+      max-height: 81px;
+    }
+
   #getToSchool{
     border: 1px solid #000000;
     border-width: 1px;
@@ -128,8 +160,16 @@ a {
     background-color: #808080;
   }
 
+  #openMenu {
+    font-size: 1.5em;
+    display: flex;
+    width: 40%;
+    flex-
+  }
+
   #closeMenu {
       display: block;
+      width: 100px;
    }
 
   #menu {
@@ -160,5 +200,19 @@ a {
      text-align: center;
      color: #000000;
    }
+
+#f1 {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 300px;
+  padding: 0 0 0 0;
+}
+
+.segmentGTS .gpleft {
+display: block;
+margin-left: auto;
+margin-right: auto;
+float: none;
+}
 
   }
