@@ -232,7 +232,7 @@ function showControls() {
     controls.innerHTML = '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.single(Player' + (!playerTurn ? 1 : 0) + ')">Single</button>';
     controls.innerHTML += '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.double(Player' + (!playerTurn ? 1 : 0) + ')">Double [2 SP]</button>';
     controls.innerHTML += '<button class="inputs inputPlayer' + (playerTurn ? 1 : 0) + '" type="button" onclick="Player' + (playerTurn ? 1 : 0) + '.recover(Player' + (!playerTurn ? 1 : 0) + ')">Recover [3 SP]</button>';
-    JScurrentPlayer.innerText =
+    JScurrentPlayer.innerText = playerTurn;
 }
 
 function updateBar(player, bar, current, max) {
