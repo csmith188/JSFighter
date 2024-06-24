@@ -7,10 +7,10 @@ let Player0;
 let Player1;
 
 // These will be used when creating the two fighters to identify each
-const P0NAME = "Crash";
-const P0CHARA = "crashr";
-const P1NAME = "Sam";
-const P1CHARA = "saml";
+const P0NAME = "RedBoi";
+const P0CHARA = "RedBoi";
+const P1NAME = "BlueBoi";
+const P1CHARA = "BlueBoi";
 
 // Reserve a space in the global scope to save our div containers
 let output;
@@ -19,13 +19,13 @@ let graphics;
 let bars;
 
 // Game parameters
-const START_HP = 40; // The amount of HP each player starts with
-const START_SP = 10; // The amount of SP each player starts with
-const MAX_STAT = 10; // The highest any stat can go
+const START_HP = 500; // The amount of HP each player starts with
+const START_SP = 500; // The amount of SP each player starts with
+const MAX_STAT = 500; // The highest any stat can go
 const MIN_DODGE = 4; // The target the player needs to hit to
 const DODGE_MULTI = 0.25 // The multiplier of damage that is reduced by a dodge
-const COST_DOUBLE = 2; // The SP cost of a Double Attack
-const COST_RECOVER = 3; // The SP cost of Recover
+const COST_DOUBLE = 20; // The SP cost of a Double Attack
+const COST_RECOVER = 50; // The SP cost of Recover
 const RECOVER_MULTI = 3; // THe multiplier to the random amount of recovered HP
 
 // This is the template that we create new fighters from
@@ -38,9 +38,9 @@ class Fighter {
         this.name = name;
         this.hp = START_HP;
         this.sp = START_SP;
-        this.atk = 5;
-        this.def = 5;
-        this.tek = 5;
+        this.atk = 20;
+        this.def = 0;
+        this.tek = 20;
         this.charaName = charaName;
     }
 
@@ -69,7 +69,7 @@ class Fighter {
         if (koCheck(target, damage)) {
             // "true" was returned
             // There was a knockout!
-            output.innerHTML += `<b><span class="damageColor">Knockout!</span></b><br>`;
+            output.innerHTML += `<b><span class="damageColor">Fatality!</span></b><br>`;
             updateGFX(target.charaName, 'ko')
 
         } else {
