@@ -1,0 +1,116 @@
+
+test site
+
+#openMenu {
+  font-size: 1.5em;
+  display: inline;
+}
+
+#closeMenu {
+  display: block;
+}
+
+#menu {
+  border: 2px solid #000000;
+  display: flex;
+  border: flex;
+  width: 20%;
+}
+
+.menuItem {
+  border: 2px solid #000000;
+  background-color: #1F51FF;
+  color: #000000;
+  border-radius: 2px;
+  margin: 5px;
+  padding: 5px;
+  font-weight: bold;
+  transition-property: background-color;
+  transition-duration: 0.5;
+  display: block;
+  display: flex;
+  border: flex;
+}
+
+.menuItem:hover {
+  background-color: #33CC33;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+  #openMenu {
+    display: inline;
+  }
+
+  #closeMenu {
+    display: block;
+  }
+
+  #menu {
+    display: block;
+    position: absolute;
+    top: 0px;
+    z-index: 99;
+    width: 95%;
+    left: 50%;
+    transform: translate(-50%);
+    background: solid;
+    background-color: #FFFFFF;
+  }
+}w
+
+
+/*
+site
+*/
+body{
+  font-family: Dangermode, Calibri,Arial;
+  background-image:linear-gradient(#7a0db5, #ffffff);
+}
+h1 {
+  font-family:Candara, Calibri, Arial;
+  text-align: center;
+}
+#content{
+  margin: auto;
+  width: 500px;
+  text-align: justify;
+}
+.segment{
+padding: 10px;
+  border: 2px solid #000000;
+  margin-bottom: 10px;
+   border-width: 1px;
+  border-color: #00000;
+  border-style: dashed;
+}
+/*
+The following content in the (.segment img) can olny be 200px
+*/
+
+ img{
+  max-width: 200px;
+  margin-bottom: 5px;
+}
+
+.segment .rightimg {
+  float: right;
+  margin-left: 10px;
+
+}
+
+.segment .leftimg {
+  margin-right: 10px;
+  float: left;
+}
+
+.segment p{
+}
+
+p{
+  margin-top: 0px;
+}
